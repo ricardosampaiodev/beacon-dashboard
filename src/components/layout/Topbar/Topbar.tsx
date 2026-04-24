@@ -19,6 +19,7 @@ export const Topbar = () => {
           <Search size={24} color="#6d6d6d" />
           <input 
             type="text" 
+            className={styles['search-input']}
             placeholder="Pesquisar criptomoeda"
           />
         </div>
