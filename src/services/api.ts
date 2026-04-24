@@ -17,3 +17,4 @@ export const fetchTopCoins = async () => {
   });
   return response.data;
 };
+

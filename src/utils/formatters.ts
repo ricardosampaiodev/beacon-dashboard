@@ -22,3 +22,4 @@ export const formatPercentage = (value: number | undefined | null) => {
   if (value === undefined || value === null || isNaN(value)) return '0.00%';
   return `${value > 0 ? '+' : ''}${value.toFixed(2)}%`;
 };
+
