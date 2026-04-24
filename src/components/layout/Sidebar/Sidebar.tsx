@@ -1,4 +1,6 @@
 import styles from './Sidebar.module.css';
+import iconGithub from '../../../assets/icons/icon-github.svg';
+import iconSettings from '../../../assets/icons/icon-settings.svg';
 
 interface SidebarProps {
   currentTab: 'home' | 'favorites';
@@ -9,7 +11,6 @@ export const Sidebar: React.FC<SidebarProps> = ({ currentTab, onChangeTab }) => 
   return (
     <nav className={styles.sidebar}>
       <div className={styles['nav-group']}>
-        
         <div 
           className={`${styles['nav-item']} ${currentTab === 'home' ? styles.active : ''}`}
           onClick={() => onChangeTab('home')}
@@ -29,18 +30,12 @@ export const Sidebar: React.FC<SidebarProps> = ({ currentTab, onChangeTab }) => 
         </div>
 
         <a href="https://github.com" target="_blank" rel="noreferrer" className={styles['nav-item']}>
-          {
-            
-          }
-          <img src="" alt="GitHub" className={styles['nav-icon']} />
+          <img src={iconGithub} alt="GitHub" className={styles['nav-icon']} />
         </a>
       </div>
 
       <div className={styles['nav-item-bottom']}>
-        {
-
-        }
-        <img src="" alt="Configurações" className={styles['nav-icon']} />
+        <img src={iconSettings} alt="Configurações" className={styles['nav-icon']} />
       </div>
     </nav>
   );
