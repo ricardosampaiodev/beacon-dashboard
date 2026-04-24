@@ -22,3 +22,17 @@
 .glow-3 { position: absolute; top: 300px; left: 20%; opacity: 1; filter: blur(120px); }
 .glow-4 { position: absolute; bottom: -100px; right: 10%; opacity: 1; filter: blur(90px); }
 .glow-5 { position: absolute; bottom: -250px; left: 150px; opacity: 1; filter: blur(100px); }
+
+.main-content {
+  margin: 0 auto; 
+  padding-left: 120px; 
+  padding-top: 110px; 
+  padding-right: 50px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  max-width: var(--max-width);
+}
+
