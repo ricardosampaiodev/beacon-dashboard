@@ -3,11 +3,17 @@ import styles from './Topbar.module.css';
 import logoBeacon from '../../../assets/images/logo-beacon.webp';
 import logoAvatar from '../../../assets/images/logo-avatar.webp';
 
-export const Topbar = () => {
+interface TopbarProps {
+  searchQuery: string;
+  onSearchChange: (query: string) => void;
+}
+
+export const Topbar: React.FC<TopbarProps> = ({ searchQuery, onSearchChange }) => {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
         
+        {/* Logo Principal */}
         <div className={styles.logo}>
           <div className={styles['logo-icon']}>
             <img src={logoBeacon} alt="Logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
@@ -15,17 +21,21 @@ export const Topbar = () => {
           <h1 className={styles['logo-text']}>Beacon</h1>
         </div>
 
+        {/* Barra de Pesquisa */}
         <div className={styles['search-bar']}>
           <Search size={24} color="#6d6d6d" />
           <input 
             type="text" 
             className={styles['search-input']}
             placeholder="Pesquisar criptomoeda"
+            value={searchQuery}
+            onChange={(e) => onSearchChange(e.target.value)}
           />
         </div>
 
       </div>
 
+      {/* Logo Secundária */}
       <div className={styles.avatar}>
         <img src={logoAvatar} alt="Avatar" className={styles['avatar-image']} />
       </div>
