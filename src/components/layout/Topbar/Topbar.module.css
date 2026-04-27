@@ -5,7 +5,7 @@
   transform: translateX(-50%);
   width: 100%;
   max-width: var(--max-width);
-  padding: 20px 50px;
+  padding: 24px 54px;
   background: transparent;
   display: flex;
   align-items: center;
@@ -35,7 +35,7 @@
 
 .logo-text {
   font-family: var(--font-clash);
-  font-size: 28px;
+  font-size: 36px;
   background: linear-gradient(to right, var(--accent-gradient-start), var(--accent-gradient-end));
   -webkit-background-clip: text;
   background-clip: text;
@@ -47,11 +47,11 @@
 .search-bar {
   background: #1b1c1e;
   border: 2px solid rgba(255, 255, 255, 0.2);
-  border-radius: 12px;
+  border-radius: 16px;
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 12px 28px;
+  padding: 12px 32px;
   width: clamp(250px, 400px, 500px);
 }
 
