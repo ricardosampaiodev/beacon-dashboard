@@ -1,5 +1,6 @@
 import { AreaChart, Area, ResponsiveContainer, XAxis } from 'recharts';
 import type { ICoin } from '../../../types';
+import styles from './OverviewChart.module.css';
 
 interface OverviewChartProps {
   selectedCoin: ICoin | null;
@@ -17,18 +18,16 @@ const mockData = [
 
 export const OverviewChart: React.FC<OverviewChartProps> = ({ selectedCoin }) => {
   return (
-    <div>
-      {/* Gráfico */}
-      <div>
-        <div>
-          <h3>{selectedCoin ? selectedCoin.name : 'Selecione uma moeda'}</h3>
-          <span>Visão Geral</span>
+    <div className={styles.card}>
+      <div className={styles.header}>
+        <div className={styles['title-info']}>
+          <h3 className={styles['coin-name']}>{selectedCoin ? selectedCoin.name : 'Selecione uma moeda'}</h3>
+          <span className={styles['overview-text']}>Visão Geral</span>
         </div>
-        <div>Média Mensal</div>
+        <div className={styles['avg-text']}>Média Mensal</div>
       </div>
 
-      {/* Renderização do Recharts */}
-      <div style={{ height: 200, marginTop: 20 }}>
+      <div className={styles['chart-wrapper']}>
         <ResponsiveContainer width="100%" height="100%">
           <AreaChart data={mockData}>
             <XAxis dataKey="name" />
