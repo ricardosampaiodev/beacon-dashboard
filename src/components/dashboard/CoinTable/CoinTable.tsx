@@ -8,13 +8,15 @@ interface CoinTableProps {
   selectedCoinId: string | null;
   favorites: string[];
   onSelectCoin: (coin: ICoin) => void;
+  onToggleFavorite: (coinId: string) => void;
 }
 
 export const CoinTable: React.FC<CoinTableProps> = ({ 
   coins, 
   selectedCoinId, 
   favorites, 
-  onSelectCoin 
+  onSelectCoin,
+  onToggleFavorite 
 }) => {
   return (
     <div className={styles.card}>
@@ -62,7 +64,13 @@ export const CoinTable: React.FC<CoinTableProps> = ({
                 </div>
 
                 <div className={styles['col-favorite']}>
-                  <button className={styles['favorite-btn']}>
+                  <button 
+                    className={styles['favorite-btn']} 
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      onToggleFavorite(coin.id);
+                    }}
+                  >
                     <Star 
                       size={24} 
                       color={isFavorite ? "#facc15" : "#ccc"} 
