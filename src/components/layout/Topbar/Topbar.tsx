@@ -1,44 +1,41 @@
-import { Search } from 'lucide-react';
-import styles from './Topbar.module.css';
-import logoBeacon from '../../../assets/images/logo-beacon.webp';
-import logoAvatar from '../../../assets/images/logo-avatar.webp';
+import styles from './MarketDetails.module.css';
 
-interface TopbarProps {
-  searchQuery: string;
-  onSearchChange: (query: string) => void;
-}
-
-export const Topbar: React.FC<TopbarProps> = ({ searchQuery, onSearchChange }) => {
+export const MarketDetails = () => {
   return (
-    <header className={styles.header}>
-      <div className={styles.container}>
-        
-        {/* Logo Principal */}
-        <div className={styles.logo}>
-          <div className={styles['logo-icon']}>
-            <img src={logoBeacon} alt="Logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+    <div className={styles.card}>
+      <h2 className={styles.title}>Mercado</h2>
+
+      <div className={styles['info-grid']}>
+        <div className={styles['info-row']}>
+          <div className={styles['info-group']}>
+            <span className={styles.label}>Moeda</span>
+            <div className={styles['coin-badge']}>
+              <img src="" alt="Icon" className={styles['coin-icon']} />
+              <div className={styles['coin-info-text']}>
+                <span className={styles['coin-name']}>Bitcoin</span>
+                <span className={styles['coin-symbol']}>BTC</span>
+              </div>
+            </div>
           </div>
-          <h1 className={styles['logo-text']}>Beacon</h1>
+          
+          <div className={styles['info-group']}>
+            <span className={styles.label}>Máxima histórica</span>
+            <span className={styles.value}>US$ 0,00</span>
+          </div>
         </div>
 
-        {/* Barra de Pesquisa */}
-        <div className={styles['search-bar']}>
-          <Search size={24} color="#6d6d6d" />
-          <input 
-            type="text" 
-            className={styles['search-input']}
-            placeholder="Pesquisar criptomoeda"
-            value={searchQuery}
-            onChange={(e) => onSearchChange(e.target.value)}
-          />
+        <div className={styles['info-row']}>
+          <div className={styles['info-group']}>
+            <span className={styles.label}>Fornecimento total</span>
+            <span className={styles.value}>N/A</span>
+          </div>
+
+          <div className={styles['info-group']}>
+            <span className={styles.label}>Mínimo histórico</span>
+            <span className={styles.value}>US$ 0,00</span>
+          </div>
         </div>
-
       </div>
-
-      {/* Logo Secundária */}
-      <div className={styles.avatar}>
-        <img src={logoAvatar} alt="Avatar" className={styles['avatar-image']} />
-      </div>
-    </header>
+    </div>
   );
 };
