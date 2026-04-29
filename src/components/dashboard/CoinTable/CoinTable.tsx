@@ -1,37 +1,38 @@
 import { Star } from 'lucide-react';
+import styles from './CoinTable.module.css';
 
 export const CoinTable = () => {
   return (
-    <div>
-      <h2>Dashboard</h2>
-
-      <div>
-        <span>Moeda</span>
-        <span>Preço</span>
-        <span>Variação 24h</span>
-        <span>Favoritar</span>
+    <div className={styles.card}>
+      <h2 className={styles.title}>Dashboard</h2>
+      
+      <div className={styles['table-header']}>
+        <span className={styles['col-coin']}>Moeda</span>
+        <span className={styles['col-price']}>Preço</span>
+        <span className={styles['col-change']}>Variação 24h</span>
+        <span className={styles['col-favorite']}>Favoritar</span>
       </div>
 
-      <div>
-        <div>
-          <div>
-            <img src="" alt="Icon" />
-            <div>
-              <span>Bitcoin</span>
-              <span>BTC</span>
+      <div className={styles['table-body']}>
+        <div className={styles['table-row']}>
+          <div className={styles['col-coin']}>
+            <img src="" alt="Icon" className={styles['coin-icon']} />
+            <div className={styles['coin-info']}>
+              <span className={styles['coin-name']}>Bitcoin</span>
+              <span className={styles['coin-symbol']}>BTC</span>
             </div>
           </div>
 
-          <div>
-            <span>US$ 0,00</span>
+          <div className={styles['col-price']}>
+            <span className={styles.price}>US$ 0,00</span>
           </div>
 
-          <div>
-            <span>+0.00%</span>
+          <div className={styles['col-change']}>
+            <span className={styles.change}>+0.00%</span>
           </div>
 
-          <div>
-            <button>
+          <div className={styles['col-favorite']}>
+            <button className={styles['favorite-btn']}>
               <Star size={24} color="#ccc" />
             </button>
           </div>
