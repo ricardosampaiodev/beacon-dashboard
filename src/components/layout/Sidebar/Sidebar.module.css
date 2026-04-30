@@ -3,7 +3,7 @@
   left: max(50px, calc(50% - 960px + 63px));
   top: 187px;
   width: 55px;
-  height: calc(100vh - 187px - 60px); 
+  height: calc(100vh - 187px - 60px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -80,6 +80,7 @@
     left: 20px;
   }
 }
+
 @media (max-width: 768px) {
   .sidebar {
     top: auto;
@@ -96,14 +97,18 @@
     border-top: 1px solid rgba(255, 255, 255, 0.05);
     z-index: 1000;
   }
+
   .nav-group {
     display: contents;
   }
-  .nav-item, .nav-item-bottom {
+
+  .nav-item,
+  .nav-item-bottom {
     width: 40px;
     height: 40px;
     margin-bottom: 0;
   }
+
   .nav-icon {
     width: 20px;
     height: 20px;

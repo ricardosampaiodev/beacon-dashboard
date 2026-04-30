@@ -1,52 +1,47 @@
-import type { ICoin } from '../../../types';
-import { formatCurrency, formatCompactCurrency } from '../../../utils/formatters';
-import styles from './MarketDetails.module.css';
+// Barra do topo com a logo, barra de busca e perfil do usuário.
+import { Search } from "lucide-react";
+import styles from "./Topbar.module.css";
+import logoBeacon from "../../../assets/images/logo-beacon.webp";
+import logoAvatar from "../../../assets/images/logo-avatar.webp";
 
-interface MarketDetailsProps {
-  selectedCoin: ICoin | null;
+interface TopbarProps {
+  searchQuery: string;
+  onSearchChange: (query: string) => void;
 }
 
-export const MarketDetails: React.FC<MarketDetailsProps> = ({ selectedCoin }) => {
-  if (!selectedCoin) return <div className={styles.card}>Carregando dados do mercado...</div>;
-
+export const Topbar: React.FC<TopbarProps> = ({
+  searchQuery,
+  onSearchChange,
+}) => {
   return (
-    <div className={styles.card}>
-      <h2 className={styles.title}>Mercado</h2>
-
-      <div className={styles['info-grid']}>
-        <div className={styles['info-row']}>
-          <div className={styles['info-group']}>
-            <span className={styles.label}>Moeda</span>
-            <div className={styles['coin-badge']}>
-              <img src={selectedCoin.image} alt={selectedCoin.name} className={styles['coin-icon']} />
-              <div className={styles['coin-info-text']}>
-                <span className={styles['coin-name']}>{selectedCoin.name}</span>
-                <span className={styles['coin-symbol']}>{selectedCoin.symbol.toUpperCase()}</span>
-              </div>
-            </div>
+    <header className={styles.header}>
+      <div className={styles.container}>
+        <div className={styles.logo}>
+          <div className={styles["logo-icon"]}>
+            <img
+              src={logoBeacon}
+              alt="Logo"
+              style={{ width: "100%", height: "100%", objectFit: "contain" }}
+            />
           </div>
-          
-          <div className={styles['info-group']}>
-            <span className={styles.label}>Máxima histórica</span>
-            <span className={styles.value}>{formatCurrency(selectedCoin.ath)}</span>
-          </div>
+          <h1 className={styles["logo-text"]}>Beacon</h1>
         </div>
 
-        <div className={styles['info-row']}>
-          <div className={styles['info-group']}>
-            <span className={styles.label}>Fornecimento total</span>
-
-            <span className={styles.value}>
-              {selectedCoin.total_supply ? `${formatCompactCurrency(selectedCoin.total_supply).replace('$', '')} ${selectedCoin.symbol.toUpperCase()}` : 'N/A'}
-            </span>
-          </div>
-
-          <div className={styles['info-group']}>
-            <span className={styles.label}>Mínimo histórico</span>
-            <span className={styles.value}>{formatCurrency(selectedCoin.atl)}</span>
-          </div>
+        <div className={styles["search-bar"]}>
+          <Search size={24} color="#6d6d6d" />
+          <input
+            type="text"
+            className={styles["search-input"]}
+            placeholder="Pesquisar criptomoeda"
+            value={searchQuery}
+            onChange={(e) => onSearchChange(e.target.value)}
+          />
         </div>
       </div>
-    </div>
+
+      <div className={styles.avatar}>
+        <img src={logoAvatar} alt="Avatar" className={styles["avatar-image"]} />
+      </div>
+    </header>
   );
 };

@@ -36,7 +36,11 @@
 .logo-text {
   font-family: var(--font-clash);
   font-size: 36px;
-  background: linear-gradient(to right, var(--accent-gradient-start), var(--accent-gradient-end));
+  background: linear-gradient(
+    to right,
+    var(--accent-gradient-start),
+    var(--accent-gradient-end)
+  );
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -92,25 +96,30 @@
     padding: 20px;
     top: 0;
   }
+
   .container {
     display: contents;
   }
+
   .logo {
     grid-column: 1;
     grid-row: 1;
   }
+
   .avatar {
     grid-column: 2;
     grid-row: 1;
     width: 45px;
     height: 45px;
   }
+
   .search-bar {
     grid-column: 1 / -1;
     grid-row: 2;
     width: 100%;
     padding: 10px 16px;
   }
+
   .logo-text {
     font-size: 28px;
   }

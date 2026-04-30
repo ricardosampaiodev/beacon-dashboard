@@ -116,23 +116,27 @@
     display: none;
   }
 }
+
 @media (max-width: 1280px) {
   .card {
     width: 100%;
     max-width: none;
   }
 }
+
 @media (max-width: 768px) {
   .card {
     height: auto;
     padding-bottom: 24px;
     border-radius: 20px;
   }
+
   .overall-info {
     position: relative;
     top: 24px;
     left: 20px;
   }
+
   .top-gainer-container {
     position: relative;
     top: 0;
@@ -141,11 +145,14 @@
     width: calc(100% - 40px);
     height: auto;
   }
+
   .top-gainer-info {
     padding: 20px;
     z-index: 2;
   }
-  .gainer-name, .gainer-change {
+
+  .gainer-name,
+  .gainer-change {
     font-size: 18px;
   }
 }

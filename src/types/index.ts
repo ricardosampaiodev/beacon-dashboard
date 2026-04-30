@@ -25,4 +25,3 @@ export interface ICoin {
     price: number[];
   };
 }
-

@@ -45,7 +45,8 @@
   transition: background 0.2s;
 }
 
-.table-row:hover, .selected-row {
+.table-row:hover,
+.selected-row {
   background: rgba(255, 255, 255, 0.05);
 }
 
