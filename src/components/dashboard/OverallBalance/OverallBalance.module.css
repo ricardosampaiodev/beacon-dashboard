@@ -111,7 +111,7 @@
   transform: scale(1.15);
 }
 
-@media (max-width: 1550px) {
+@media (max-width: 1400px) {
   .image-wrapper {
     display: none;
   }

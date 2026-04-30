@@ -60,7 +60,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
         </div>
 
         <a
-          href="https://github.com"
+          href="https://github.com/ricardosampaiodev/beacon-dashboard"
           target="_blank"
           rel="noreferrer"
           className={styles["nav-item"]}

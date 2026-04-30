@@ -16,7 +16,7 @@ export const Topbar: React.FC<TopbarProps> = ({
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        <div className={styles.logo}>
+        <a href="#" className={styles.logo} style={{ textDecoration: 'none' }}>
           <div className={styles["logo-icon"]}>
             <img
               src={logoBeacon}
@@ -25,7 +25,7 @@ export const Topbar: React.FC<TopbarProps> = ({
             />
           </div>
           <h1 className={styles["logo-text"]}>Beacon</h1>
-        </div>
+        </a>
 
         <div className={styles["search-bar"]}>
           <Search size={24} color="#6d6d6d" />
@@ -39,9 +39,9 @@ export const Topbar: React.FC<TopbarProps> = ({
         </div>
       </div>
 
-      <div className={styles.avatar}>
+      <a href="https://github.com/ricardosampaiodev" target="_blank" rel="noreferrer" className={styles.avatar} style={{ display: 'block' }}>
         <img src={logoAvatar} alt="Avatar" className={styles["avatar-image"]} />
-      </div>
+      </a>
     </header>
   );
 };
