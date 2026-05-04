@@ -48,8 +48,8 @@ export const OverviewChart: React.FC<OverviewChartProps> = ({
           >
             <defs>
               <linearGradient id="colorVal" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="#4c8ff8" stopOpacity={0.3} />
-                <stop offset="95%" stopColor="#4c8ff8" stopOpacity={0} />
+                <stop offset="5%" stopColor="#e4861a" stopOpacity={0.3} />
+                <stop offset="95%" stopColor="#e4861a" stopOpacity={0} />
               </linearGradient>
             </defs>
             <Tooltip
@@ -77,7 +77,7 @@ export const OverviewChart: React.FC<OverviewChartProps> = ({
             <Area
               type="monotone"
               dataKey="val"
-              stroke="#4c8ff8"
+              stroke="#e4861a"
               strokeWidth={3}
               fillOpacity={1}
               fill="url(#colorVal)"

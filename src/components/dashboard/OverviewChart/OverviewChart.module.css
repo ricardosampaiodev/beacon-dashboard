@@ -7,7 +7,7 @@
   height: 325px;
   width: 100%;
   max-width: 893px;
-  padding: 32px 40px;
+  padding: 48px 44px;
   display: flex;
   flex-direction: column;
 }
@@ -17,13 +17,13 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin-bottom: 27px;
+  margin-bottom: 28px;
 }
 
 .title-info {
   display: flex;
   align-items: center;
-  gap: 11px;
+  gap: 12px;
 }
 
 .coin-name {
@@ -70,7 +70,7 @@
 
 @media (max-width: 768px) {
   .card {
-    padding: 20px 16px;
+    padding: 28px 20px;
     border-radius: 20px;
   }
 

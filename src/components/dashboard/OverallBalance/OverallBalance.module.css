@@ -42,7 +42,7 @@
   left: 40px;
   width: calc(100% - 80px);
   height: 157px;
-  background: var(--bg-card);
+  background: linear-gradient(90deg, rgba(59, 78, 154, 0.30) 0%, rgba(40, 39, 76, 0.30) 100%);
   border-radius: 20px;
   display: flex;
   overflow: hidden;
@@ -51,7 +51,7 @@
 .top-gainer-info {
   display: flex;
   flex-direction: column;
-  padding: 25px 0 0 38px;
+  padding: 24px 0 0 40px;
   gap: 8px;
   z-index: 2;
 }

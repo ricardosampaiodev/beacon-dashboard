@@ -17,8 +17,8 @@
   overflow: clip;
 }
 
-.glow-1 { position: absolute; top: 0px; left: -100px; opacity: 1; filter: blur(80px); }
-.glow-2 { position: absolute; top: -50px; right: -50px; opacity: 1; filter: blur(100px); }
+.glow-1 { position: absolute; top: 0px; left: 170px; opacity: 1; filter: blur(100px); }
+.glow-2 { position: absolute; top: -150px; right: -100px; opacity: 1; filter: blur(150px); }
 .glow-3 { position: absolute; top: 300px; left: 20%; opacity: 1; filter: blur(120px); }
 .glow-4 { position: absolute; bottom: -100px; right: 10%; opacity: 1; filter: blur(90px); }
 .glow-5 { position: absolute; bottom: -250px; left: 150px; opacity: 1; filter: blur(100px); }

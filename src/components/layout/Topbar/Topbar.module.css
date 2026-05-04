@@ -49,8 +49,8 @@
 }
 
 .search-bar {
-  background: #1b1c1e;
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: #101322;
+  border: 2px solid rgba(221, 233, 255, 0.2);
   border-radius: 16px;
   display: flex;
   align-items: center;
