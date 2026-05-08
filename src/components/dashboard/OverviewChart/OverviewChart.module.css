@@ -10,6 +10,11 @@
   padding: 48px 44px;
   display: flex;
   flex-direction: column;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translate(-1px, -1px);
 }
 
 .header {
@@ -72,6 +77,10 @@
   .card {
     padding: 28px 20px;
     border-radius: 20px;
+  }
+
+  .card:hover {
+    transform: translate(0px, 0px);
   }
 
   .title-info {

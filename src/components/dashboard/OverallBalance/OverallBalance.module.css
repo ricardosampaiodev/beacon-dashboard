@@ -9,6 +9,11 @@
   max-width: 765px;
   position: relative;
   overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translate(-1px, -1px);
 }
 
 .overall-info {
@@ -65,7 +70,7 @@
 
 .gainer-row {
   display: flex;
-  align-items: center;
+  align-items: end;
   gap: 8px;
 }
 
@@ -79,7 +84,7 @@
 .gainer-change {
   font-family: var(--font-roboto);
   font-weight: 500;
-  font-size: 28px;
+  font-size: 20px;
   color: var(--accent-blue);
   font-variant-numeric: tabular-nums;
 }
@@ -129,6 +134,10 @@
     height: auto;
     padding-bottom: 24px;
     border-radius: 20px;
+  }
+
+  .card:hover {
+    transform: translate(0px, 0px);
   }
 
   .overall-info {

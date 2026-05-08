@@ -11,6 +11,11 @@
   flex-direction: column;
   position: sticky;
   top: 148px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translate(-1px, -1px);
 }
 
 .title {
@@ -104,6 +109,10 @@
   .card {
     padding: 28px 20px;
     border-radius: 20px;
+  }
+
+  .card:hover {
+    transform: translate(0px, 0px);
   }
 
   .info-row {
