@@ -74,7 +74,7 @@ export const CoinTable: React.FC<CoinTableProps> = ({
 
                 <div className={styles["col-change"]}>
                   <span
-                    className={`${styles.change} ${coin.price_change_percentage_24h < 0 ? styles.negative : ""}`}
+                    className={`${styles.change} ${coin.price_change_percentage_24h < 0 ? styles.negative : styles.positive}`}
                   >
                     {formatPercentage(coin.price_change_percentage_24h)}
                   </span>

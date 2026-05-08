@@ -71,6 +71,41 @@
   font-size: 18px;
 }
 
+.skeleton-card {
+  background: var(--bg-card);
+  border-radius: 32px;
+  animation: pulse 1.8s ease-in-out infinite;
+}
+
+.skeleton-balance {
+  width: 100%;
+  max-width: 765px;
+  height: 325px;
+}
+
+.skeleton-chart {
+  width: 100%;
+  max-width: 893px;
+  height: 325px;
+}
+
+.skeleton-table {
+  width: 100%;
+  max-width: 1072px;
+  height: 400px;
+}
+
+.skeleton-details {
+  width: 100%;
+  max-width: 587px;
+  height: 350px;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+}
+
 @keyframes spin {
   to {
     transform: rotate(360deg);

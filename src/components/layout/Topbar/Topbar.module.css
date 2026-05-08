@@ -57,6 +57,11 @@
   gap: 8px;
   padding: 12px 32px;
   width: clamp(250px, 400px, 500px);
+  transition: box-shadow 0.3s, border-color 0.3s;
+}
+
+.search-bar:focus-within {
+  border-color: rgba(76, 143, 248, 0.4);
 }
 
 .search-input {

@@ -11,11 +11,13 @@
   display: flex;
   flex-direction: column;
   transition: transform 0.2s ease-in-out;
+  animation: fadeInUp 0.5s ease-out 0.1s both;
 }
 
 .card:hover {
   transform: translate(-1px, -1px);
 }
+
 
 .header {
   display: flex;
@@ -95,5 +97,16 @@
 
   .avg-text {
     font-size: 14px;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

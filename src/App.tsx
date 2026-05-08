@@ -84,14 +84,7 @@ export default function App() {
     );
   };
 
-  // Enquanto carrega ou der ruim, mostra um aviso na tela
-  if (loading) {
-    return (
-      <div className={styles["center-feedback"]}>
-        <div className={styles.spinner}></div>
-      </div>
-    );
-  }
+  // Erro: retorno antecipado com mensagem
   if (error) {
     return (
       <div className={styles["center-feedback"]}>
@@ -114,23 +107,37 @@ export default function App() {
       <Sidebar currentTab={currentTab} onChangeTab={setCurrentTab} />
 
       <main className={styles["main-content"]}>
+        {loading ? (
+          <>
+            <div className={styles["top-section"]}>
+              <div className={`${styles["skeleton-card"]} ${styles["skeleton-balance"]}`} />
+              <div className={`${styles["skeleton-card"]} ${styles["skeleton-chart"]}`} />
+            </div>
+            <div className={styles["bottom-section"]}>
+              <div className={`${styles["skeleton-card"]} ${styles["skeleton-table"]}`} />
+              <div className={`${styles["skeleton-card"]} ${styles["skeleton-details"]}`} />
+            </div>
+          </>
+        ) : (
+          <>
+            <div className={styles["top-section"]}>
+              <OverallBalance totalBalance={totalBalance} topGainer={topGainer} />
+              <OverviewChart selectedCoin={selectedCoin} />
+            </div>
 
-        <div className={styles["top-section"]}>
-          <OverallBalance totalBalance={totalBalance} topGainer={topGainer} />
-          <OverviewChart selectedCoin={selectedCoin} />
-        </div>
-
-
-        <div className={styles["bottom-section"]}>
-          <CoinTable
-            coins={filteredCoins}
-            selectedCoinId={selectedCoinId}
-            favorites={favorites}
-            onSelectCoin={(coin) => setSelectedCoinId(coin.id)}
-            onToggleFavorite={handleToggleFavorite}
-          />
-          <MarketDetails selectedCoin={selectedCoin} />
-        </div>
+            <div className={styles["bottom-section"]}>
+              <CoinTable
+                key={currentTab}
+                coins={filteredCoins}
+                selectedCoinId={selectedCoinId}
+                favorites={favorites}
+                onSelectCoin={(coin) => setSelectedCoinId(coin.id)}
+                onToggleFavorite={handleToggleFavorite}
+              />
+              <MarketDetails selectedCoin={selectedCoin} />
+            </div>
+          </>
+        )}
       </main>
     </div>
   );
