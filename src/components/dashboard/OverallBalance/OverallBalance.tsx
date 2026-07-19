@@ -16,7 +16,7 @@ export const OverallBalance: React.FC<OverallBalanceProps> = ({
   return (
     <div className={styles.card}>
       <div className={styles["overall-info"]}>
-        <span className={styles.label}>Saldo total</span>
+        <span className={styles.label}>Cap. de Mercado</span>
         <h2 className={styles.balance}>{formatCurrency(totalBalance)}</h2>
       </div>
 

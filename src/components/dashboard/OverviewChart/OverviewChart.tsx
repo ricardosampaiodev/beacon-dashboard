@@ -37,7 +37,7 @@ export const OverviewChart: React.FC<OverviewChartProps> = ({
           <span className={styles["overview-text"]}>Visão Geral</span>
         </div>
 
-        <div className={styles["avg-text"]}>Média Mensal</div>
+        <div className={styles["avg-text"]}>Média Semanal</div>
       </div>
 
       <div className={styles["chart-wrapper"]}>
